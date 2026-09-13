@@ -1,0 +1,29 @@
+/* Nexlm brand colours on top of the VitePress default theme. */
+:root {
+  --vp-c-brand-1: #4f46e5;
+  --vp-c-brand-2: #6366f1;
+  --vp-c-brand-3: #818cf8;
+  --vp-c-brand-soft: rgba(99, 102, 241, 0.14);
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #6366f1 20%, #10b981);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, rgba(99, 102, 241, 0.45) 50%, rgba(16, 185, 129, 0.45) 50%);
+  --vp-home-hero-image-filter: blur(56px);
+}
+
+.dark {
+  --vp-c-brand-1: #a5b4fc;
+  --vp-c-brand-2: #818cf8;
+  --vp-c-brand-3: #6366f1;
+}
+
+/* Keep wide reference tables readable. */
+.vp-doc table {
+  display: block;
+  overflow-x: auto;
+}
+
+.vp-doc td code,
+.vp-doc th code {
+  white-space: nowrap;
+}
