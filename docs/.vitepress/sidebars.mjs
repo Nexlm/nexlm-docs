@@ -3,6 +3,7 @@ export const guideSidebar = [
     text: 'Getting started',
     items: [
       { text: 'Welcome to Nexlm', link: '/guide/' },
+      { text: 'Early access on testnet', link: '/guide/testnet' },
       { text: 'Create an account', link: '/guide/create-account' },
       { text: 'Verify your email', link: '/guide/verify-email' },
       { text: 'Verify your identity (KYC)', link: '/guide/identity-verification' },
@@ -66,6 +67,7 @@ export const adminSidebar = [
       { text: 'Account status', link: '/admin/account-status' },
       { text: 'Trade monitoring', link: '/admin/trade-monitoring' },
       { text: 'Stuck trades', link: '/admin/stuck-trades' },
+      { text: 'Incident playbook', link: '/admin/incident-playbook' },
     ],
   },
 ];
@@ -144,6 +146,7 @@ export const developersSidebar = [
       { text: 'Testing', link: '/developers/testing' },
       { text: 'Deployment', link: '/developers/deployment' },
       { text: 'Security model', link: '/developers/security-model' },
+      { text: 'Troubleshooting', link: '/developers/troubleshooting' },
       { text: 'Contributing', link: '/developers/contributing' },
     ],
   },
@@ -154,6 +157,8 @@ export const apiSidebar = [
     text: 'Basics',
     items: [
       { text: 'Overview', link: '/api/' },
+      { text: 'Quickstart', link: '/api/quickstart' },
+      { text: 'JavaScript client', link: '/api/client-example' },
       { text: 'Errors', link: '/api/errors' },
       { text: 'Pagination', link: '/api/pagination' },
       { text: 'Health check', link: '/api/health' },
