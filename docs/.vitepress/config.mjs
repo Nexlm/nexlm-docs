@@ -9,9 +9,19 @@ export default defineConfig({
   base: process.env.DOCS_BASE || '/',
   cleanUrls: true,
   lastUpdated: true,
+  appearance: 'dark',
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: `${process.env.DOCS_BASE || '/'}logo.svg` }],
-    ['meta', { name: 'theme-color', content: '#4f46e5' }],
+    ['meta', { name: 'theme-color', content: '#0c1310' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+    [
+      'link',
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap',
+      },
+    ],
   ],
   themeConfig: {
     logo: '/logo.svg',
