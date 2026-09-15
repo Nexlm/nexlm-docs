@@ -1,23 +1,106 @@
-/* Nexlm brand colours on top of the VitePress default theme. */
+/*
+ * Nexlm "ledger" theme on top of the VitePress default theme — the same
+ * palette and type as the trading app, landing site and pitch reel.
+ */
 :root {
-  --vp-c-brand-1: #4f46e5;
-  --vp-c-brand-2: #6366f1;
-  --vp-c-brand-3: #818cf8;
-  --vp-c-brand-soft: rgba(99, 102, 241, 0.14);
+  --nx-ink: #0c1310;
+  --nx-ground: #070b09;
+  --nx-panel: #13201a;
+  --nx-line: #22342b;
+  --nx-paper: #e9eee4;
+  --nx-soft: #c4cdc2;
+  --nx-moss: #7b8a80;
+  --nx-leaf: #16a05d;
+  --nx-mint: #3fd08a;
+  --nx-gold: #f3c44b;
 
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(120deg, #6366f1 20%, #10b981);
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, rgba(99, 102, 241, 0.45) 50%, rgba(16, 185, 129, 0.45) 50%);
-  --vp-home-hero-image-filter: blur(56px);
+  --vp-font-family-base: 'Instrument Sans', 'Segoe UI', system-ui, sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+
+  --vp-c-brand-1: #0f7a45;
+  --vp-c-brand-2: #16a05d;
+  --vp-c-brand-3: #16a05d;
+  --vp-c-brand-soft: rgba(22, 160, 93, 0.14);
+
+  --vp-home-hero-name-color: var(--vp-c-text-1);
+  --vp-home-hero-image-background-image: radial-gradient(circle, rgba(22, 160, 93, 0.35), rgba(243, 196, 75, 0.2));
+  --vp-home-hero-image-filter: blur(60px);
 }
 
 .dark {
-  --vp-c-brand-1: #a5b4fc;
-  --vp-c-brand-2: #818cf8;
-  --vp-c-brand-3: #6366f1;
+  --vp-c-bg: var(--nx-ink);
+  --vp-c-bg-alt: var(--nx-ground);
+  --vp-c-bg-elv: var(--nx-panel);
+  --vp-c-bg-soft: var(--nx-panel);
+  --vp-c-divider: var(--nx-line);
+  --vp-c-border: var(--nx-line);
+  --vp-c-gutter: var(--nx-ground);
+  --vp-c-text-1: var(--nx-paper);
+  --vp-c-text-2: var(--nx-soft);
+  --vp-c-text-3: var(--nx-moss);
+
+  --vp-c-brand-1: var(--nx-mint);
+  --vp-c-brand-2: var(--nx-leaf);
+  --vp-c-brand-3: var(--nx-leaf);
+  --vp-c-brand-soft: rgba(63, 208, 138, 0.12);
+
+  --vp-c-tip-1: var(--nx-mint);
+  --vp-c-warning-1: var(--nx-gold);
+  --vp-c-warning-soft: rgba(243, 196, 75, 0.08);
+
+  --vp-button-brand-bg: var(--nx-leaf);
+  --vp-button-brand-text: var(--nx-ink);
+  --vp-button-brand-hover-bg: var(--nx-mint);
+  --vp-button-brand-hover-text: var(--nx-ink);
+  --vp-button-brand-active-bg: var(--nx-mint);
+  --vp-button-brand-active-text: var(--nx-ink);
 }
 
-/* Keep wide reference tables readable. */
+/* Faint ledger ruling behind content, as on the app and landing site. */
+.dark .VPContent {
+  background-image: repeating-linear-gradient(to bottom, transparent 0 63px, rgba(233, 238, 228, 0.025) 63px 64px);
+}
+
+.VPHero .name,
+.VPHero .text,
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.VPFeature .title {
+  font-family: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.VPHero .name {
+  font-weight: 800;
+}
+
+.VPHero .name .clip {
+  background: none;
+  -webkit-text-fill-color: currentColor;
+}
+
+.vp-doc h1 {
+  font-weight: 800;
+  font-size: 2.6rem;
+  line-height: 1;
+}
+
+.vp-doc h2 {
+  font-weight: 700;
+}
+
+/* Mono uppercase table headers, like the app's data tables. */
+.vp-doc th {
+  font-family: var(--vp-font-family-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--vp-c-text-3);
+}
+
 .vp-doc table {
   display: block;
   overflow-x: auto;
@@ -26,4 +109,20 @@
 .vp-doc td code,
 .vp-doc th code {
   white-space: nowrap;
+}
+
+.dark .vp-doc :not(pre) > code {
+  color: var(--nx-gold);
+  background: rgba(243, 196, 75, 0.08);
+}
+
+.dark .VPFeature {
+  border: 1px solid var(--nx-line);
+  background: rgba(19, 32, 26, 0.7);
+  border-radius: 6px;
+}
+
+.VPSidebarItem.is-active > .item .text,
+.VPNavBarMenuLink.active {
+  color: var(--nx-gold) !important;
 }
