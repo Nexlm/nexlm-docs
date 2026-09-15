@@ -1,8 +1,8 @@
-name: Deploy docs
+name: Deploy docs to GitHub Pages
 
+# The docs deploy on Vercel from main. This workflow is kept for publishing to
+# GitHub Pages too — enable Pages in the repo settings, then run it manually.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
