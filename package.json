@@ -2,7 +2,7 @@
   "name": "nexlm-docs",
   "version": "0.1.0",
   "private": true,
-  "description": "Documentation for Nexlm — the peer-to-peer XLM ↔ Naira exchange on Stellar",
+  "description": "Documentation for Nexlm \u2014 the peer-to-peer XLM \u2194 Naira exchange on Stellar",
   "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev docs",
